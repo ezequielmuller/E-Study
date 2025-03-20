@@ -1,0 +1,509 @@
+#UsuarioLogado {
+    background-color: rgb(86, 86, 189);
+    color: white;
+    padding-inline: 10%;
+    padding-block: 10px;
+    border-radius: 10px;
+    width: 90%;
+    margin-inline: auto;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(86, 86, 189);
+    background: linear-gradient(90deg, rgba(86, 86, 189, 1) 2%, rgba(157, 236, 255, 1) 100%);
+}
+
+.logoheader {
+    width: 100px;
+}
+
+.navbar {
+    background-color: #52559f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    height: 100px;
+    /* Altura da barra de navegação */
+
+
+    top: 0;
+    /* Posiciona a barra de navegação no topo */
+    z-index: 1000;
+    /* Mantém a barra de navegação acima de outros elementos */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.616);
+    border-radius: 10px;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: 1px solid #cccccc00;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background-color: transparent;
+    /* fundo transparente */
+}
+
+#bpesquisar {
+    padding: 5px 10px;
+    background-color: transparent;
+    /* fundo transparente */
+    border: none;
+    /* sem borda */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s, background-color 0.3s;
+    /* transição suave */
+}
+
+#bpesquisar i {
+    color: #ffffff;
+    /* ícone da lupa sempre branco */
+    background-color: #ffffff00;
+}
+
+#bpesquisar:hover {
+    background-color: transparent;
+    /* mantém o fundo transparente ao passar o mouse */
+}
+
+#bpesquisar:hover i {
+    color: #fff;
+    /* mantém a cor da lupa branca mesmo ao passar o mouse */
+}
+
+.profile-link {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* Caixa de texto */
+#Texto {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #cccccc00;
+    background-color: #ffffff80;
+    outline: 0;
+    color: rgba(0, 0, 0, 0.247);
+    display: flex;
+    align-items: center;
+    flex: 1;
+    /* Adiciona flexibilidade para ocupar o espaço disponível */
+    padding-top: 2px;
+    margin: auto;
+    max-width: 300px;
+    /* Define uma largura máxima */
+    min-width: 150px;
+    /* Define uma largura mínima */
+    font-size: 10;
+}
+
+#Texto::placeholder {
+    font-size: 10;
+}
+
+/* Botão Enviar */
+.botaoColEsq {
+    background-color: rgba(169, 159, 255, 0.685);
+    color: white;
+    /* Roxo */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    /* Fonte padrão */
+    font-size: 13px;
+    /* Tamanho da fonte */
+    font-weight: normal;
+    /* Espessura da fonte */
+    text-transform: uppercase;
+    /* Letras maiúsculas */
+    border: 0px solid #800080;
+    /* Borda roxa */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    width: 180px;
+    /* Corrigido para letras minúsculas */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-flex;
+    /* Para alinhar o ícone e o texto horizontalmente */
+    align-items: center;
+    /* Alinha verticalmente o ícone e o texto */
+    justify-content: center;
+}
+
+#sairdosistema {
+    color: white;
+}
+
+.botaoColEsq:hover {
+    background-color: rgba(200, 233, 255, 0.61);
+    color: rgb(116, 116, 189);
+    cursor: pointer;
+}
+
+.botaoColEsq i {
+    margin-right: 10px;
+    /* Espaçamento entre o ícone e o texto */
+}
+
+.botaoColEsq i {
+    margin-right: 8px;
+    /* Espaçamento entre o ícone e o texto */
+}
+
+
+#fundoModal {
+    background-color: #f9f9f9;
+    /* Cor de fundo da postagem */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    padding: 15px;
+    /* Espaçamento interno */
+    margin-bottom: 20px;
+    /* Espaçamento entre as postagens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    border: 1px solid #ddd;
+    /* Borda fina */
+    justify-content: center;
+    /* Alinha o conteúdo ao fundo do contêiner */
+}
+
+.Enviar:hover {
+    background-color: rgba(200, 233, 255, 0.61);
+    color: rgb(116, 116, 189);
+    cursor: pointer;
+}
+
+/* Ajuste do formulário */
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo do formulário fixo */
+.sticky-form {
+    background: linear-gradient(90deg, rgb(64, 64, 136) 2%, rgb(122, 182, 197) 100%);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    justify-content: center;
+    gap: 10px;
+    /* Espaçamento entre o input e o botão */
+    width: 80%;
+    height: 100px;
+}
+
+/* Estilo do contêiner do feed */
+#feed-container {
+    padding: 20px;
+
+    margin: 0;
+    align-items: center;
+
+
+}
+
+/* Estilo das mensagens */
+.mensagem {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Alinha o conteúdo ao fundo do contêiner */
+    align-items: stretch;
+    /* Faz com que o conteúdo ocupe toda a largura do contêiner */
+    background-color: #9b92ff5c;
+    padding: 50px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: justify;
+    /* Justifica o texto dentro do contêiner */
+}
+
+
+
+
+
+/* Estilo de cada postagem */
+.post {
+    background-color: #f9f9f9;
+    /* Cor de fundo da postagem */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    padding: 15px;
+    /* Espaçamento interno */
+    margin-bottom: 20px;
+    /* Espaçamento entre as postagens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    border: 1px solid #ddd;
+    /* Borda fina */
+    justify-content: center;
+    /* Alinha o conteúdo ao fundo do contêiner */
+}
+
+/* Estilo do cabeçalho da postagem */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /* Espaçamento abaixo do cabeçalho */
+}
+
+/* Estilo da informação do usuário */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do nome de usuário */
+.username {
+    font-weight: bold;
+    /* Negrito para o nome de usuário */
+    color: #333;
+    /* Cor do nome de usuário */
+    font-size: 16px;
+    /* Tamanho da fonte do nome de usuário */
+}
+
+/* Estilo do conteúdo da postagem */
+.post-content {
+    font-size: 14px;
+    /* Tamanho da fonte do conteúdo */
+    color: #555;
+    /* Cor do texto da postagem */
+}
+
+
+
+
+/* Estilo das colunas laterais */
+.coluna-lateral {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    /* Torna a coluna lateral fixa */
+    top: 0;
+    /* Mantém a coluna fixa no topo da tela quando o usuário rolar */
+    height: 100vh;
+    /* Garante que a coluna ocupe toda a altura da tela */
+    overflow: auto;
+    /* Permite que o conteúdo seja rolável caso ultrapasse a altura da coluna */
+    z-index: 1010;
+    border: solid 1px white;
+}
+
+/* Estilo das mensagens */
+.mensagem {
+    background-color: #9b92ff5c;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: justify;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .col-lg-3 {
+        display: none;
+        /* Esconde as colunas laterais em telas menores */
+    }
+
+    .col-lg-6 {
+        max-width: 100%;
+        /* Coluna central ocupa toda a largura */
+    }
+}
+
+/* Certifique-se de que o container principal tenha flexbox para centralizar */
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Centralizando o feed e definindo a largura */
+.col-lg-6 {
+    flex: 0 0 50%;
+    /* Ocupa 50% da largura do container */
+    max-width: 50%;
+    /* Limita a largura a 50% */
+
+}
+
+/* Espaço para as colunas laterais */
+.col-lg-3 {
+    flex: 0 0 25%;
+    /* Ocupa 25% da largura do container */
+    max-width: 25%;
+    /* Limita a largura a 25% */
+
+}
+
+/* Responsividade - Ajuste em telas menores */
+@media (max-width: 992px) {
+    .col-lg-3 {
+        display: none;
+        /* Esconde as colunas laterais em telas menores */
+    }
+
+    .col-lg-6 {
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        max-width: 100%;
+        /* Coluna central ocupa toda a largura */
+    }
+}
+
+#feed-container {
+    margin: auto;
+}
+
+#formularioEscrever {
+    background-color: #f9f9f9;
+    /* Cor de fundo da postagem */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    padding: 15px;
+    /* Espaçamento interno */
+    margin-bottom: 20px;
+    /* Espaçamento entre as postagens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    border: 1px solid #ddddddd3;
+    /* Borda fina */
+    justify-content: center;
+    /* Alinha o conteúdo ao fundo do contêiner */
+    height: 400px;
+    width: 400px;
+}
+
+#arquivos {
+    background-color: rgba(132, 119, 253, 0.685);
+    color: white;
+    /* Roxo */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    /* Fonte padrão */
+    font-size: 13px;
+    /* Tamanho da fonte */
+    font-weight: normal;
+    /* Espessura da fonte */
+    text-transform: uppercase;
+    /* Letras maiúsculas */
+    border: 0px solid #800080;
+    /* Borda roxa */
+    box-shadow: #ffc0cb;
+    /* Sombra leve */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    width: 180px;
+    /* Corrigido para letras minúsculas */
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+    display: inline-flex;
+    /* Para alinhar o ícone e o texto horizontalmente */
+    align-items: center;
+    /* Alinha verticalmente o ícone e o texto */
+    justify-content: center;
+}
+
+.imgpost {
+    border-radius: 10px;
+    border: solid white 1px;
+}
+
+
+:root {
+    --purple: #9920ea;
+    --purple-black: #5e1580;
+    --white: #ffffffb2;
+    --gray: #ccc;
+}
+
+.btn {
+    width: 60px;
+    height: 30px;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    transition: 0.3s;
+}
+
+
+.btn-curtir {
+    font-size: 2rem;
+    color: var(--gray);
+}
+
+.btn-curtir.curtido {
+    color: var(--purple);
+    transform: scale(1.2);
+}
+
+.btn-icone {
+    display: inline-block;
+    font-size: 2rem;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.btn--icone-curtir {
+    display: block;
+}
+
+.btn--icone-curtido {
+    display: none;
+}
+
+.curtido .btn--icone-curtir {
+    display: none;
+}
+
+.curtido .btn--icone-curtido {
+    display: block;
+    color: var(--purple);
+}

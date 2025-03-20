@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/*fonte do botão de login*/
+
+
+body {
+    background: rgb(86, 86, 189);
+    background: linear-gradient(90deg, rgb(70, 70, 158) 2%, rgb(247, 247, 247) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.container {
+    width: 700px;
+    padding: 7%;
+    box-shadow: 0px 0px 20px rgba(196, 9, 9, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+table {
+    margin-left: -15%;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+#login {
+    font-family: "Chau Philomene One";
+    font-weight: 200;
+    font-style: normal;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.993);
+    text-align: left;
+
+}
+
+input[type="text"],
+input[type="password"] {
+    border: 0px solid rgb(116, 116, 189);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: #ffffff49;
+    outline: 0;
+    color: rgba(0, 0, 0, 0.247);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.692);
+}
+
+
+button[type="submit"] {
+    background-color: rgba(132, 119, 253, 0.685);
+    /* Transparência */
+    color: white;
+    /* Roxo */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    /* Fonte padrão */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    font-weight: normal;
+    /* Espessura da fonte */
+    text-transform: uppercase;
+    /* Letras maiúsculas */
+
+    /* Opções de personalização (opcional) */
+    border: 0px solid #800080;
+    /* Borda roxa */
+    box-shadow: #ffc0cb;
+    /* Sombra leve */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    width: 150px;
+    /* Corrigido para letras minúsculas */
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+button[type="submit"]:hover {
+    background-color: rgba(200, 233, 255, 0.61);
+    color: rgb(116, 116, 189);
+    cursor: pointer;
+}
+
+a {
+    color: whitesmoke;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+a:hover {
+    color: rgb(84, 84, 211);
+}
+
+.input-group-text {
+    background-color: transparent;
+    border: none;
+}
+
+#logo{
+    width: 250px;
+}
+
+
+

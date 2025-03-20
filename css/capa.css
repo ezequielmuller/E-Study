@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(86, 86, 189);
+    background: linear-gradient(90deg, rgba(86, 86, 189, 1) 2%, rgba(157, 236, 255, 1) 100%);
+}
+
+html, body {
+    height: 100%; /* Garante que o body e o html ocupem toda a altura */
+    width: 100%; /* Garante que o body e o html ocupem toda a largura */
+    font-family: 'Vollkorn', serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.coluna-lateral1,
+.coluna-lateral2 {
+    width: 50%; /* Cada coluna ocupa metade da largura da tela */
+    height: 100%; /* Cada coluna ocupa toda a altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coluna-lateral1 {
+    color: white;
+}
+
+.coluna-lateral2 {
+    color: white;
+}
+
+/* Animação da palavra "Study" */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 8rem;
+    font-weight: bold;
+    color: white;
+    opacity: 0; /* Começa invisível */
+    transform: translateY(30px); /* Começa abaixo da posição normal */
+    animation: slideIn 2s ease-out forwards, fadeIn 3s ease-out forwards;
+}
+
+/* Animação de deslizar para cima */
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px); /* Começa 30px abaixo */
+    }
+    100% {
+        transform: translateY(0); /* Move para a posição final */
+    }
+}
+
+/* Animação de fade-in (desaparecendo e aparecendo) */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Começa invisível */
+    }
+    100% {
+        opacity: 1; /* Torna-se completamente visível */
+    }
+}
+
+/* Estilo de links do menu */
+nav a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.botao{
+    background-color: rgba(169, 159, 255, 0.685);
+    color: white;
+    /* Roxo */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    /* Fonte padrão */
+    font-size: 13px;
+    /* Tamanho da fonte */
+    font-weight: normal;
+    /* Espessura da fonte */
+    text-transform: uppercase;
+    /* Letras maiúsculas */
+    border: 0px solid #800080;
+    /* Borda roxa */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    width: 250px;
+    /* Corrigido para letras minúsculas */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-flex;
+    /* Para alinhar o ícone e o texto horizontalmente */
+    align-items: center;
+    /* Alinha verticalmente o ícone e o texto */
+    justify-content: center;
+}
